@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+        --navy-dark: #001f3f;
+        --navy-light: #003366;
+        --navy-accent: #0056b3;
+        --white: #ffffff;
+    }
+
+    .header_section {
+        font-family: Arial, sans-serif;
+    }
+
+    .header_top {
+        background-color: var(--navy-dark);
+        color: var(--white);
+        padding: 10px 0;
+    }
+
+    .header_top_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .navbar-brand {
+        color: var(--white);
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .navbar-brand span {
+        color: #4a90e2;
+    }
+
+    .contact_nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    .contact_nav a {
+        color: var(--white);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .social_box {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social_box a {
+        color: var(--white);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .social_box a:hover {
+        color: #4a90e2;
+    }
+
+    .header_bottom {
+        background-color: var(--navy-light);
+        padding: 15px 0;
+    }
+
+    .custom_nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .navbar_brand_mobile {
+        display: none;
+    }
+
+    .navbar-nav {
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .nav-item a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav-item a:hover {
+        color: #4a90e2;
+    }
+
+    .nav-item.active a {
+        color: #4a90e2;
+    }
+
+    .navbar-toggler {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--white);
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .header_top_container {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact_nav {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar_brand_mobile {
+            display: block;
+        }
+
+        .navbar-toggler {
+            display: block;
+        }
+
+        .navbar-nav {
+            display: none;
+        }
+
+        .collapse.show .navbar-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+        }
+    }
+</style>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="galvanización, recubrimiento, metales, industrial" />
+  <meta name="description" content="Grupo empresarial especializado en servicios de galvanización" />
+  <meta name="author" content="" />
+
+  <title>GalvaGroup</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles -->
+  <link href="css/indexstyles.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+          <div class="header_top_container">
+              <a class="navbar-brand" href="index.html">Galva<span>Group</span></a>
+              <div class="contact_nav">
+                  <a href="">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>Cl 36 #52-50, La Candelaria, Medellín</span>
+                  </a>
+                  <a href="">
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                      <span>Contáctenos</span>
+                  </a>
+                  <a href="">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                      <span>info@galvagroup.com</span>
+                  </a>
+              </div>
+              <div class="social_box">
+                  <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="header_bottom">
+          <div class="container-fluid">
+              <nav class="navbar navbar-expand-lg custom_nav-container">
+                  <a class="navbar-brand navbar_brand_mobile" href="index.html">Galva<span>Group</span></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                      <i class="fa fa-bars"></i>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav">
+                          <li class="nav-item active">
+                              <a class="nav-link" href="index.html">Inicio <span class="sr-only">(actual)</span></a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="service.html">Servicios</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="about.html">Nosotros</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="portfolio.html">Portafolio</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="contact.html">Contacto</a>
+                          </li>
+                      </ul>
+                  </div>
+              </nav>
+          </div>
+      </div>
+  </header>
+    <!-- end header section -->
+     <!-- slider section -->
+    <section class="slider_section">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Galvanizados Industriales -->
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="detail-box">
+                <h1>
+                  Galvanizados<br />
+                  Industriales<br />
+                  del Aburrá
+                </h1>
+                <p>
+                  Especialistas en galvanización por inmersión en caliente, enfocados en la excelencia y calidad del servicio.
+                </p>
+                <div class="btn-box">
+                  <a href="about.html" class="btn1">
+                    Conócenos
+                  </a>
+                  <a href="contact.html" class="btn2">
+                    Contáctanos
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Industrias y Galvanizados -->
+          <div class="carousel-item">
+            <div class="container">
+              <div class="detail-box">
+                <h1>
+                  Industrias y<br />
+                  Galvanizados<br />
+                  INDUGAL
+                </h1>
+                <p>
+                  Líderes en galvanoplastia y procesos de recubrimiento especializado sobre metales.
+                </p>
+                <div class="btn-box">
+                  <a href="about.html" class="btn1">
+                    Conócenos
+                  </a>
+                  <a href="contact.html" class="btn2">
+                    Contáctanos
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel_btn-box">
+          <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <span class="sr-only">Siguiente</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+  <!-- service section -->
+<section class="service_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>Nuestros <span>Servicios</span></h2>
+    </div>
+    <div class="row">
+      <!-- Servicios Galvanizados Industriales -->
+      <div class="col-md-6">
+        <h3 class="text-center mb-4">Galvanizados Industriales</h3>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s1.png" alt="Galvanización en caliente" />
+          </div>
+          <div class="detail-box">
+            <h5>
+              Galvanización por Inmersión en Caliente
+            </h5>
+            <p>
+              Proceso especializado de recubrimiento de zinc mediante inmersión en caliente para protección contra la corrosión.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s2.png" alt="Recubrimientos especiales" />
+          </div>
+          <div class="detail-box">
+            <h5>
+              Recubrimientos Especiales
+            </h5>
+            <p>
+              Tratamientos especializados para diferentes tipos de metales y necesidades industriales.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicios INDUGAL -->
+      <div class="col-md-6">
+        <h3 class="text-center mb-4">Industrias y Galvanizados</h3>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s3.png" alt="Galvanización en frío" />
+          </div>
+          <div class="detail-box">
+            <h5>
+              Galvanización en Frío
+            </h5>
+            <p>
+              Proceso de zincado por electrodeposición y recubrimientos especiales sobre metales varios.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s4.png" alt="Procesos especiales" />
+          </div>
+          <div class="detail-box">
+            <h5>
+              Electrodeposición de Metales
+            </h5>
+            <p>
+              Procesos especializados de electrodeposición de metales no férricos sobre diferentes superficies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Servicios Adicionales -->
+    <div class="row mt-5">
+      <div class="col-sm-6 col-md-4">
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s1.png" alt="Asesoría Técnica" />
+          </div>
+          <div class="detail-box">
+            <h5>Asesoría Técnica</h5>
+            <p>
+              Servicio de consultoría y asesoramiento en procesos de galvanización y recubrimientos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s2.png" alt="Control de Calidad" />
+          </div>
+          <div class="detail-box">
+            <h5>Control de Calidad</h5>
+            <p>
+              Procesos rigurosos de control y aseguramiento de la calidad en todos nuestros servicios.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="box">
+          <div class="img-box">
+            <img src="images/s3.png" alt="Soluciones Industriales" />
+          </div>
+          <div class="detail-box">
+            <h5>Soluciones Industriales</h5>
+            <p>
+              Soluciones integrales para el sector industrial y metalmecánico.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-box">
+      <a href="contact.html">
+        Contáctanos
+      </a>
+    </div>
+  </div>
+</section>
+<!-- end service section -->
+<!-- Mission Vision Section -->
+<section class="about_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>Nuestras <span>Empresas</span></h2>
+    </div>
+    <div class="row">
+      <!-- Galvanizados Industriales -->
+      <div class="col-md-6 mb-4">
+        <div class="company-box">
+          <h3>Galvanizados Industriales</h3>
+          <div class="company-logo text-center mb-4">
+            <img src="images/gi.jpeg" alt="Logo Galvanizados Industriales" class="img-fluid" style="max-width: 200px;"/>
+          </div>
+          <div class="mission-box">
+            <h4>Misión</h4>
+            <p>
+              Enfocados en la excelencia en la prestación del servicio en procesos y recubrimientos sobre metales mediante la Galvanización por inmersión en caliente; Galvanizado en frío o zincado por electrodeposición de zinc, procesos y recubrimientos especiales por electrodeposición de metales no férricos sobre piezas en metales varios.
+            </p>
+          </div>
+          <div class="vision-box">
+            <h4>Visión</h4>
+            <p>
+              Aprovechar el conocimiento y la experiencia de nuestro grupo humano, para ofrecer a los clientes la mejor experiencia del servicio y, en procesos y recubrimientos sobre metales. Siempre visionando al cambio, la mejora y la diferencia.
+            </p>
+          </div>
+          <div class="policy-box">
+            <h4>Política de Calidad</h4>
+            <p>
+              Galvanizados Industriales del Aburrá S.A.S, empresa dedicada al revestimiento de metales, enfocada a la excelencia en la prestación del servicio al cliente y la galvanización sobre el hierro y el acero por inmersión en zinc en estado líquido, caliente.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Industrias y Galvanizados -->
+      <div class="col-md-6 mb-4">
+        <div class="company-box">
+          <h3>Industrias y Galvanizados</h3>
+          <div class="company-logo text-center mb-4">
+            <img src="images/ig.png" alt="Logo Industrias y Galvanizados" class="img-fluid" style="max-width: 200px;"/>
+          </div>
+          <div class="mission-box">
+            <h4>Misión</h4>
+            <p>
+              Líder en la industria de la galvanoplastia; enfocados en la excelencia en la prestación del servicio en procesos y recubrimientos sobre metales mediante la Galvanización por inmersión en caliente; Galvanizado en frío o zincado por electrodeposición de zinc, procesos y recubrimientos especiales.
+            </p>
+          </div>
+          <div class="vision-box">
+            <h4>Visión</h4>
+            <p>
+              Aprovechar el conocimiento y la experiencia de nuestro grupo humano, para ofrecer a los clientes la mejor experiencia del servicio y, en procesos y recubrimientos sobre metales. Siempre visionando al cambio, la mejora y la diferencia.
+            </p>
+          </div>
+          <div class="policy-box">
+            <h4>Política de Calidad</h4>
+            <p>
+              Indugal -- Industrias y Galvanizados S.A.S, empresa dedicada al revestimiento de metales; enfocados a la excelencia en la prestación del servicio al cliente, en procesos y recubrimientos sobre metales.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.company-box {
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.mission-box, .vision-box, .policy-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.mission-box:hover, .vision-box:hover, .policy-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.company-box h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.mission-box h4, .vision-box h4, .policy-box h4 {
+    color: #555;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.company-logo img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.company-logo img:hover {
+    transform: scale(1.05);
+}
+
+.heading_container span {
+    color: #ff3e00;
+}
+</style>
+<!-- contact section -->
+<section class="contact_section">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>Contacta con <span>Nosotros</span></h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6 px-0">
+        <div class="form_container">
+          <form action="">
+            <div class="form-row">
+              <div class="form-group col">
+                <input type="text" class="form-control" placeholder="Su Nombre" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-lg-6">
+                <input type="text" class="form-control" placeholder="Teléfono" />
+              </div>
+              <div class="form-group col-lg-6">
+                <select name="" id="" class="form-control wide">
+                  <option value="">Seleccione Empresa</option>
+                  <option value="">Galvanizados Industriales</option>
+                  <option value="">Industrias y Galvanizados</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <input type="email" class="form-control" placeholder="Email" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <input type="text" class="message-box form-control" placeholder="Mensaje" />
+              </div>
+            </div>
+            <div class="btn_box">
+              <button>
+                ENVIAR
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6 px-0">
+        <div class="map_container">
+          <div class="map">
+            <div id="googleMap">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2!2d-75.5672!3d6.2442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428f!2sCl.+36+%2352-50%2C+La+Candelaria%2C+Medell%C3%ADn%2C+Antioquia!5e0!3m2!1ses!2sco!4v1"
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end contact section -->
+<!-- client section -->
+<section class="client_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        Lo que dicen nuestros <span>Clientes</span>
+      </h2>
+    </div>
+    <div class="row">
+      <div class="col-md-9 mx-auto">
+        <div id="customCarousel2" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Testimonios Galvanizados Industriales -->
+            <div class="carousel-item active">
+              <div class="box">
+                <div class="client_id">
+                  <div class="img-box">
+                    <img src="images/client.jpg" alt="Sector Industrial" style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%;" />
+                  </div>
+                  <h5>
+                    Sector Construcción
+                  </h5>
+                  <h6>
+                    Cliente de Galvanizados Industriales
+                  </h6>
+                </div>
+                <div class="detail-box">
+                  <p>
+                    "La calidad en el proceso de galvanización en caliente ha sido excepcional. Los tiempos de entrega y el servicio al cliente superaron nuestras expectativas."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonios INDUGAL -->
+            <div class="carousel-item">
+              <div class="box">
+                <div class="client_id">
+                  <div class="img-box">
+                    <img src="images/client.jpg" alt="Sector Metalmecánico" style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%;" />
+                  </div>
+                  <h5>
+                    Sector Metalmecánico
+                  </h5>
+                  <h6>
+                    Cliente de Industrias y Galvanizados
+                  </h6>
+                </div>
+                <div class="detail-box">
+                  <p>
+                    "Los procesos de electrodeposición y recubrimientos especiales han sido fundamentales para nuestros productos. Un servicio profesional y de alta calidad."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio General -->
+            <div class="carousel-item">
+              <div class="box">
+                <div class="client_id">
+                  <div class="img-box">
+                    <img src="images/client.jpg" alt="Sector Industrial General" style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%;" />
+                  </div>
+                  <h5>
+                    Sector Industrial
+                  </h5>
+                  <h6>
+                    Cliente GalvaGroup
+                  </h6>
+                </div>
+                <div class="detail-box">
+                  <p>
+                    "Me parece excelente que nos den banano y una bolsita de leche colanta, me parece muy bien, gracias."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Indicadores del Carrusel -->
+          <div class="carousel_btn-box">
+            <ol class="carousel-indicators">
+              <li data-target="#customCarousel2" data-slide-to="0" class="active"></li>
+              <li data-target="#customCarousel2" data-slide-to="1"></li>
+              <li data-target="#customCarousel2" data-slide-to="2"></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end client section -->
+<!-- info section -->
+<section class="info_section">
+  <div class="info_container layout_padding2">
+    <div class="container">
+      <div class="info_logo">
+        <a class="navbar-brand" href="index.html">Galva<span>Group</span></a>
+      </div>
+      <div class="info_main">
+        <div class="row">
+          <div class="col-md-3 col-lg-2">
+            <div class="info_link-box">
+              <h5>
+                Enlaces Útiles
+              </h5>
+              <ul>
+                <li>
+                  <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                  <a href="about.html">Nosotros</a>
+                </li>
+                <li>
+                  <a href="service.html">Servicios</a>
+                </li>
+                <li>
+                  <a href="portfolio.html">Portafolio</a>
+                </li>
+                <li>
+                  <a href="contact.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5>
+              Nuestras Empresas
+            </h5>
+            <p>
+              Galvanizados Industriales del Aburrá SAS<br>
+              Industrias y Galvanizados SAS
+            </p>
+          </div>
+          <div class="col-md-3 mx-auto">
+            <h5>
+              Redes Sociales
+            </h5>
+            <div class="social_box">
+              <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5>
+              Ubicación
+            </h5>
+            <p>
+              Cl 36 #52-50, La Candelaria<br>
+              Medellín, Antioquia
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="info_bottom">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="info_contact">
+              <div class="row">
+                <div class="col-md-3">
+                  <a href="#" class="link-box">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>
+                      Ubicación
+                    </span>
+                  </a>
+                </div>
+                <div class="col-md-5">
+                  <a href="#" class="link-box">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>
+                      Llámenos
+                    </span>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="#" class="link-box">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>
+                      info@galvagroup.com
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end info section -->
+
+<!-- footer section -->
+<footer class="footer_section">
+  <div class="container">
+    <p>
+      &copy; <span id="displayYear"></span> Todos los derechos reservados - GalvaGroup
+    </p>
+  </div>
+</footer>
+<!-- footer section -->
+
+<!-- Scripts -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
